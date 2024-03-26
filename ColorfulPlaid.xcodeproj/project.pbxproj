@@ -12,6 +12,9 @@
 		F4D2461B2BB2E95F001C629E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2461A2BB2E95F001C629E /* ViewController.swift */; };
 		F4D246202BB2E961001C629E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D2461F2BB2E961001C629E /* Assets.xcassets */; };
 		F4D246232BB2E961001C629E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D246212BB2E961001C629E /* LaunchScreen.storyboard */; };
+		F4D2462C2BB305AD001C629E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4D2462B2BB305AD001C629E /* SnapKit */; };
+		F4D2462E2BB305AD001C629E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F4D2462D2BB305AD001C629E /* SnapKit-Dynamic */; };
+		F4D246312BB306D3001C629E /* DolphinHTTP in Frameworks */ = {isa = PBXBuildFile; productRef = F4D246302BB306D3001C629E /* DolphinHTTP */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D246312BB306D3001C629E /* DolphinHTTP in Frameworks */,
+				F4D2462C2BB305AD001C629E /* SnapKit in Frameworks */,
+				F4D2462E2BB305AD001C629E /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,11 @@
 			dependencies = (
 			);
 			name = ColorfulPlaid;
+			packageProductDependencies = (
+				F4D2462B2BB305AD001C629E /* SnapKit */,
+				F4D2462D2BB305AD001C629E /* SnapKit-Dynamic */,
+				F4D246302BB306D3001C629E /* DolphinHTTP */,
+			);
 			productName = ColorfulPlaid;
 			productReference = F4D246132BB2E95F001C629E /* ColorfulPlaid.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +119,10 @@
 				Base,
 			);
 			mainGroup = F4D2460A2BB2E95F001C629E;
+			packageReferences = (
+				F4D2462A2BB305AD001C629E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F4D2462F2BB306D3001C629E /* XCRemoteSwiftPackageReference "DolphinHTTP" */,
+			);
 			productRefGroup = F4D246142BB2E95F001C629E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,6 +366,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4D2462A2BB305AD001C629E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		F4D2462F2BB306D3001C629E /* XCRemoteSwiftPackageReference "DolphinHTTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WeiTsungCheng/DolphinHTTP.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4D2462B2BB305AD001C629E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4D2462A2BB305AD001C629E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F4D2462D2BB305AD001C629E /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4D2462A2BB305AD001C629E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		F4D246302BB306D3001C629E /* DolphinHTTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4D2462F2BB306D3001C629E /* XCRemoteSwiftPackageReference "DolphinHTTP" */;
+			productName = DolphinHTTP;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4D2460B2BB2E95F001C629E /* Project object */;
 }
