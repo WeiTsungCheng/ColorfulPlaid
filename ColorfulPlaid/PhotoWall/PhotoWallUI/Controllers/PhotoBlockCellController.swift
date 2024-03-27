@@ -24,6 +24,14 @@ final class PhotoBlockCellController {
         return cell
     }
     
+    func preload() {
+        viewModel.loadThumbnailImage()
+    }
+    
+    func cancelLoad() {
+        releaseCellForReuse()
+    }
+    
     private func binded(_ cell: PhotoBlockCollectionViewCell) -> PhotoBlockCollectionViewCell {
         self.cell = cell
         cell.idLabel.text = "\(viewModel.id)"
@@ -38,4 +46,7 @@ final class PhotoBlockCellController {
         return cell
     }
     
+    private func releaseCellForReuse() {
+        cell = nil
+    }
 }
