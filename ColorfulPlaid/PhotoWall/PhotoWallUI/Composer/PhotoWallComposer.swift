@@ -9,8 +9,8 @@ import Foundation
 
 final class PhotoWallComposer {
     
-    static func photoWallComposedWith() -> PhotoWallViewController {
-        let photoWallViewModel = PhotoWallViewModel()
+    static func photoWallComposedWith(api: PhotoAPI) -> PhotoWallViewController {
+        let photoWallViewModel = PhotoWallViewModel(photoAPI: api)
         let photoWallViewController = PhotoWallViewController()
         photoWallViewController.viewModel = photoWallViewModel
         

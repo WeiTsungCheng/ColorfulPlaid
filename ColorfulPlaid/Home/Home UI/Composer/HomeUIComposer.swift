@@ -17,7 +17,8 @@ final class HomeUIComposer {
         homeViewController.viewModel = homeViewModel
         
         homeViewModel.navigateToNextPage = {
-            let photoWallViewController = PhotoWallComposer.photoWallComposedWith()
+            let api = PhotoAPI()
+            let photoWallViewController = PhotoWallComposer.photoWallComposedWith(api: api)
             if let navigationController = homeViewController.navigationController {
                 navigationController.pushViewController(photoWallViewController, animated: false)
             }
