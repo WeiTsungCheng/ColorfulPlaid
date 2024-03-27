@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class HomeViewController: UIViewController {
     
@@ -48,10 +47,12 @@ final class HomeViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(photoWallButton)
         
-        photoWallButton.snp.makeConstraints { make in
-            make.centerX.centerY.equalToSuperview()
-        }
-        
+        photoWallButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            photoWallButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            photoWallButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+
     }
     
     private func bind() {
