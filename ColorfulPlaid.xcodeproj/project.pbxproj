@@ -12,11 +12,18 @@
 		F4D2461B2BB2E95F001C629E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2461A2BB2E95F001C629E /* HomeViewController.swift */; };
 		F4D246202BB2E961001C629E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D2461F2BB2E961001C629E /* Assets.xcassets */; };
 		F4D246232BB2E961001C629E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D246212BB2E961001C629E /* LaunchScreen.storyboard */; };
-		F4D2462C2BB305AD001C629E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4D2462B2BB305AD001C629E /* SnapKit */; };
-		F4D2462E2BB305AD001C629E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F4D2462D2BB305AD001C629E /* SnapKit-Dynamic */; };
 		F4D246312BB306D3001C629E /* DolphinHTTP in Frameworks */ = {isa = PBXBuildFile; productRef = F4D246302BB306D3001C629E /* DolphinHTTP */; };
 		F4D246362BB30928001C629E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246352BB30928001C629E /* HomeViewModel.swift */; };
 		F4D2463B2BB33947001C629E /* HomeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2463A2BB33947001C629E /* HomeUIComposer.swift */; };
+		F4D246422BB3CE87001C629E /* PhotoWallComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246412BB3CE87001C629E /* PhotoWallComposer.swift */; };
+		F4D246442BB3CF3B001C629E /* PhotoWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246432BB3CF3B001C629E /* PhotoWallViewController.swift */; };
+		F4D246472BB3CF70001C629E /* PhotoWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246462BB3CF70001C629E /* PhotoWallViewModel.swift */; };
+		F4D2464A2BB3D168001C629E /* PhotoBlockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246492BB3D168001C629E /* PhotoBlockCollectionViewCell.swift */; };
+		F4D2464E2BB3D31C001C629E /* UICollection+Dequeuing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2464D2BB3D31C001C629E /* UICollection+Dequeuing.swift */; };
+		F4D246502BB3D3A9001C629E /* UICollectionCell+CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2464F2BB3D3A9001C629E /* UICollectionCell+CellIdentifier.swift */; };
+		F4D246522BB404FB001C629E /* PhotoBlockCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246512BB404FB001C629E /* PhotoBlockCellController.swift */; };
+		F4D246542BB40536001C629E /* PhotoBlockCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246532BB40536001C629E /* PhotoBlockCellViewModel.swift */; };
+		F4D246572BB409B6001C629E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246562BB409B6001C629E /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,15 @@
 		F4D246242BB2E961001C629E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D246352BB30928001C629E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F4D2463A2BB33947001C629E /* HomeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIComposer.swift; sourceTree = "<group>"; };
+		F4D246412BB3CE87001C629E /* PhotoWallComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWallComposer.swift; sourceTree = "<group>"; };
+		F4D246432BB3CF3B001C629E /* PhotoWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWallViewController.swift; sourceTree = "<group>"; };
+		F4D246462BB3CF70001C629E /* PhotoWallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWallViewModel.swift; sourceTree = "<group>"; };
+		F4D246492BB3D168001C629E /* PhotoBlockCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBlockCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4D2464D2BB3D31C001C629E /* UICollection+Dequeuing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollection+Dequeuing.swift"; sourceTree = "<group>"; };
+		F4D2464F2BB3D3A9001C629E /* UICollectionCell+CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionCell+CellIdentifier.swift"; sourceTree = "<group>"; };
+		F4D246512BB404FB001C629E /* PhotoBlockCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBlockCellController.swift; sourceTree = "<group>"; };
+		F4D246532BB40536001C629E /* PhotoBlockCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBlockCellViewModel.swift; sourceTree = "<group>"; };
+		F4D246562BB409B6001C629E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,8 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D246312BB306D3001C629E /* DolphinHTTP in Frameworks */,
-				F4D2462C2BB305AD001C629E /* SnapKit in Frameworks */,
-				F4D2462E2BB305AD001C629E /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +80,9 @@
 			children = (
 				F4D246162BB2E95F001C629E /* AppDelegate.swift */,
 				F4D246182BB2E95F001C629E /* SceneDelegate.swift */,
+				F4D2464C2BB3D260001C629E /* Extension */,
 				F4D246322BB30894001C629E /* Home */,
+				F4D2463C2BB3CDBB001C629E /* PhotoWall */,
 				F4D2461F2BB2E961001C629E /* Assets.xcassets */,
 				F4D246212BB2E961001C629E /* LaunchScreen.storyboard */,
 				F4D246242BB2E961001C629E /* Info.plist */,
@@ -116,6 +132,77 @@
 			path = Composer;
 			sourceTree = "<group>";
 		};
+		F4D2463C2BB3CDBB001C629E /* PhotoWall */ = {
+			isa = PBXGroup;
+			children = (
+				F4D246552BB407E7001C629E /* Model */,
+				F4D2463D2BB3CDD6001C629E /* PhotoWall Presentation */,
+				F4D2463E2BB3CDF8001C629E /* PhotoWallUI */,
+			);
+			path = PhotoWall;
+			sourceTree = "<group>";
+		};
+		F4D2463D2BB3CDD6001C629E /* PhotoWall Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F4D246462BB3CF70001C629E /* PhotoWallViewModel.swift */,
+				F4D246532BB40536001C629E /* PhotoBlockCellViewModel.swift */,
+			);
+			path = "PhotoWall Presentation";
+			sourceTree = "<group>";
+		};
+		F4D2463E2BB3CDF8001C629E /* PhotoWallUI */ = {
+			isa = PBXGroup;
+			children = (
+				F4D246452BB3CF52001C629E /* Composer */,
+				F4D2463F2BB3CE10001C629E /* Controllers */,
+				F4D246402BB3CE1C001C629E /* Views */,
+			);
+			path = PhotoWallUI;
+			sourceTree = "<group>";
+		};
+		F4D2463F2BB3CE10001C629E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4D246432BB3CF3B001C629E /* PhotoWallViewController.swift */,
+				F4D246512BB404FB001C629E /* PhotoBlockCellController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F4D246402BB3CE1C001C629E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4D246492BB3D168001C629E /* PhotoBlockCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4D246452BB3CF52001C629E /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				F4D246412BB3CE87001C629E /* PhotoWallComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		F4D2464C2BB3D260001C629E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4D2464D2BB3D31C001C629E /* UICollection+Dequeuing.swift */,
+				F4D2464F2BB3D3A9001C629E /* UICollectionCell+CellIdentifier.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4D246552BB407E7001C629E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4D246562BB409B6001C629E /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,8 +220,6 @@
 			);
 			name = ColorfulPlaid;
 			packageProductDependencies = (
-				F4D2462B2BB305AD001C629E /* SnapKit */,
-				F4D2462D2BB305AD001C629E /* SnapKit-Dynamic */,
 				F4D246302BB306D3001C629E /* DolphinHTTP */,
 			);
 			productName = ColorfulPlaid;
@@ -166,7 +251,6 @@
 			);
 			mainGroup = F4D2460A2BB2E95F001C629E;
 			packageReferences = (
-				F4D2462A2BB305AD001C629E /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F4D2462F2BB306D3001C629E /* XCRemoteSwiftPackageReference "DolphinHTTP" */,
 			);
 			productRefGroup = F4D246142BB2E95F001C629E /* Products */;
@@ -195,11 +279,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D246572BB409B6001C629E /* Photo.swift in Sources */,
 				F4D2461B2BB2E95F001C629E /* HomeViewController.swift in Sources */,
+				F4D246472BB3CF70001C629E /* PhotoWallViewModel.swift in Sources */,
+				F4D246522BB404FB001C629E /* PhotoBlockCellController.swift in Sources */,
+				F4D246542BB40536001C629E /* PhotoBlockCellViewModel.swift in Sources */,
 				F4D246172BB2E95F001C629E /* AppDelegate.swift in Sources */,
+				F4D246422BB3CE87001C629E /* PhotoWallComposer.swift in Sources */,
 				F4D2463B2BB33947001C629E /* HomeUIComposer.swift in Sources */,
 				F4D246192BB2E95F001C629E /* SceneDelegate.swift in Sources */,
+				F4D2464A2BB3D168001C629E /* PhotoBlockCollectionViewCell.swift in Sources */,
+				F4D246502BB3D3A9001C629E /* UICollectionCell+CellIdentifier.swift in Sources */,
+				F4D2464E2BB3D31C001C629E /* UICollection+Dequeuing.swift in Sources */,
 				F4D246362BB30928001C629E /* HomeViewModel.swift in Sources */,
+				F4D246442BB3CF3B001C629E /* PhotoWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,14 +509,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F4D2462A2BB305AD001C629E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
 		F4D2462F2BB306D3001C629E /* XCRemoteSwiftPackageReference "DolphinHTTP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WeiTsungCheng/DolphinHTTP.git";
@@ -435,16 +520,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F4D2462B2BB305AD001C629E /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F4D2462A2BB305AD001C629E /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		F4D2462D2BB305AD001C629E /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F4D2462A2BB305AD001C629E /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
 		F4D246302BB306D3001C629E /* DolphinHTTP */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4D2462F2BB306D3001C629E /* XCRemoteSwiftPackageReference "DolphinHTTP" */;

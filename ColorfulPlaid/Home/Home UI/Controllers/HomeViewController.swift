@@ -52,7 +52,7 @@ final class HomeViewController: UIViewController {
             photoWallButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             photoWallButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-
+        
     }
     
     private func bind() {

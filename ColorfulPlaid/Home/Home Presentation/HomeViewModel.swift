@@ -9,7 +9,7 @@ import Foundation
 
 final class HomeViewModel {
     
-    var title: String = "Home"
+    private(set) var title: String = "Home"
     var navigateToNextPage: (() -> Void)?
     
 }

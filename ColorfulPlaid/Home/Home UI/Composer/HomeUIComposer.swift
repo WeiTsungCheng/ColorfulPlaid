@@ -17,10 +17,10 @@ final class HomeUIComposer {
         homeViewController.viewModel = homeViewModel
         
         homeViewModel.navigateToNextPage = {
-            let vc = UIViewController()
+            let photoWallViewController = PhotoWallComposer.photoWallComposedWith()
             if let navigationController = homeViewController.navigationController {
-                       navigationController.pushViewController(vc, animated: false)
-                   }
+                navigationController.pushViewController(photoWallViewController, animated: false)
+            }
         }
         
         return homeViewController
