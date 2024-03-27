@@ -15,11 +15,30 @@ struct Photo: Decodable {
     let url: URL
 
     /// e.g. 1
-    let albumId: String
+    let albumId: Int
 
     /// e.g. 1
-    let id: String
+    let id: Int
 
     /// e.g. "accusamus beatae ad facilis cum similique qui sunt"
     let title: String
+}
+
+extension Photo {
+    
+    static func loadTestPhotos() -> [Photo] {
+        
+        guard let fileUrl = Bundle.main.url(forResource: "photos", withExtension: "json") else {
+            fatalError("File not found")
+        }
+
+        do {
+            let data = try Data(contentsOf: fileUrl)
+            let decoder = JSONDecoder()
+            let photos = try decoder.decode([Photo].self, from: data)
+            return photos
+        } catch {
+            return []
+        }
+    }
 }

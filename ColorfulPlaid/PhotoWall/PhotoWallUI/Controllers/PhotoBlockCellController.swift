@@ -25,7 +25,7 @@ final class PhotoBlockCellController {
     
     private func binded(_ cell: PhotoBlockCollectionViewCell) -> PhotoBlockCollectionViewCell {
         self.cell = cell
-        cell.idLabel.text = viewModel.id
+        cell.idLabel.text = "\(viewModel.id)"
         cell.titleLabel.text = viewModel.title
         
         return cell

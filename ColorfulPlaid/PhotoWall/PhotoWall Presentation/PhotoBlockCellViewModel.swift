@@ -19,8 +19,12 @@ final class PhotoBlockCellViewModel {
         return model.title
     }
     
-    var id: String {
+    var id: Int {
         return model.id
+    }
+    
+    var albumId: Int {
+        return model.albumId
     }
     
     var url: URL {
