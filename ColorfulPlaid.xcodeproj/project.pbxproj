@@ -24,6 +24,7 @@
 		F4D246522BB404FB001C629E /* PhotoBlockCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246512BB404FB001C629E /* PhotoBlockCellController.swift */; };
 		F4D246542BB40536001C629E /* PhotoBlockCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246532BB40536001C629E /* PhotoBlockCellViewModel.swift */; };
 		F4D246572BB409B6001C629E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246562BB409B6001C629E /* Photo.swift */; };
+		F4D2465A2BB448F1001C629E /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D246592BB448F1001C629E /* photos.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		F4D246512BB404FB001C629E /* PhotoBlockCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBlockCellController.swift; sourceTree = "<group>"; };
 		F4D246532BB40536001C629E /* PhotoBlockCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBlockCellViewModel.swift; sourceTree = "<group>"; };
 		F4D246562BB409B6001C629E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F4D246592BB448F1001C629E /* photos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D246562BB409B6001C629E /* Photo.swift */,
+				F4D246592BB448F1001C629E /* photos.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D2465A2BB448F1001C629E /* photos.json in Resources */,
 				F4D246232BB2E961001C629E /* LaunchScreen.storyboard in Resources */,
 				F4D246202BB2E961001C629E /* Assets.xcassets in Resources */,
 			);

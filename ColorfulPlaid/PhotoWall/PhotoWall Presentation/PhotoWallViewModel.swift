@@ -15,14 +15,7 @@ final class PhotoWallViewModel {
     var onPhotoLoad: Observer<[Photo]>?
 
     func loadPhotos() {
-        let testPhotos = [
-            Photo(thumbnailUrl: URL(string: "https://via.placeholder.com/150/92c952")!, url: URL(string: "https://via.placeholder.com/600/92c952")!, albumId: "12", id: "12", title: "Apple"),
-            Photo(thumbnailUrl: URL(string: "https://via.placeholder.com/150/92c952")!, url: URL(string: "https://via.placeholder.com/600/92c952")!, albumId: "12", id: "12", title: "Apple"),
-            Photo(thumbnailUrl: URL(string: "https://via.placeholder.com/150/92c952")!, url: URL(string: "https://via.placeholder.com/600/92c952")!, albumId: "12", id: "12", title: "Apple"),
-            Photo(thumbnailUrl: URL(string: "https://via.placeholder.com/150/92c952")!, url: URL(string: "https://via.placeholder.com/600/92c952")!, albumId: "12", id: "12", title: "Apple"),
-            Photo(thumbnailUrl: URL(string: "https://via.placeholder.com/150/92c952")!, url: URL(string: "https://via.placeholder.com/600/92c952")!, albumId: "12", id: "12", title: "Apple")
-            ]
-            
+        let testPhotos = Photo.loadTestPhotos()
         self.onPhotoLoad?(testPhotos)
     }
 }
