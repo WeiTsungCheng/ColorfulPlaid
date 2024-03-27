@@ -25,6 +25,7 @@
 		F4D246542BB40536001C629E /* PhotoBlockCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246532BB40536001C629E /* PhotoBlockCellViewModel.swift */; };
 		F4D246572BB409B6001C629E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246562BB409B6001C629E /* Photo.swift */; };
 		F4D2465A2BB448F1001C629E /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D246592BB448F1001C629E /* photos.json */; };
+		F4D2465E2BB44C3E001C629E /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2465D2BB44C3E001C629E /* PhotoAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		F4D246532BB40536001C629E /* PhotoBlockCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBlockCellViewModel.swift; sourceTree = "<group>"; };
 		F4D246562BB409B6001C629E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F4D246592BB448F1001C629E /* photos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
+		F4D2465D2BB44C3E001C629E /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				F4D246162BB2E95F001C629E /* AppDelegate.swift */,
 				F4D246182BB2E95F001C629E /* SceneDelegate.swift */,
+				F4D2465B2BB44C13001C629E /* Web API */,
 				F4D2464C2BB3D260001C629E /* Extension */,
 				F4D246322BB30894001C629E /* Home */,
 				F4D2463C2BB3CDBB001C629E /* PhotoWall */,
@@ -206,6 +209,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F4D2465B2BB44C13001C629E /* Web API */ = {
+			isa = PBXGroup;
+			children = (
+				F4D2465D2BB44C3E001C629E /* PhotoAPI.swift */,
+			);
+			path = "Web API";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +302,7 @@
 				F4D246172BB2E95F001C629E /* AppDelegate.swift in Sources */,
 				F4D246422BB3CE87001C629E /* PhotoWallComposer.swift in Sources */,
 				F4D2463B2BB33947001C629E /* HomeUIComposer.swift in Sources */,
+				F4D2465E2BB44C3E001C629E /* PhotoAPI.swift in Sources */,
 				F4D246192BB2E95F001C629E /* SceneDelegate.swift in Sources */,
 				F4D2464A2BB3D168001C629E /* PhotoBlockCollectionViewCell.swift in Sources */,
 				F4D246502BB3D3A9001C629E /* UICollectionCell+CellIdentifier.swift in Sources */,

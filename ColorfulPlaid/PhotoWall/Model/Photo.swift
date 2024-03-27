@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photo: Decodable {
+struct Photo: Codable {
     /// e.g. "https://via.placeholder.com/150/92c952"
     let thumbnailUrl: URL
 
