@@ -19,6 +19,7 @@ final class PhotoBlockCellController {
     
     func view(in collectionView: UICollectionView, at indexPath: IndexPath) -> UICollectionViewCell {
         let cell = binded(collectionView.dequeueReusableCell(for: indexPath))
+        viewModel.loadThumbnailImage()
         
         return cell
     }
@@ -28,6 +29,12 @@ final class PhotoBlockCellController {
         cell.idLabel.text = "\(viewModel.id)"
         cell.titleLabel.text = viewModel.title
         
+        viewModel.onImageLoad = {  [weak self] image in
+            DispatchQueue.main.async {
+                self?.cell?.photoImageView.image = image
+            }
+        }
+
         return cell
     }
     

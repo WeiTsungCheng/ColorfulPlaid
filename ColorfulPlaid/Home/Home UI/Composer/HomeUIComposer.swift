@@ -10,15 +10,14 @@ import UIKit
 
 final class HomeUIComposer {
     
-    static func homeComposedWith() -> HomeViewController {
+    static func homeComposedWith(api: PhotoAPI, loader: ImageLoader) -> HomeViewController {
         
         let homeViewModel = HomeViewModel()
         let homeViewController = HomeViewController()
         homeViewController.viewModel = homeViewModel
         
         homeViewModel.navigateToNextPage = {
-            let api = PhotoAPI()
-            let photoWallViewController = PhotoWallComposer.photoWallComposedWith(api: api)
+            let photoWallViewController = PhotoWallComposer.photoWallComposedWith(api: api, imageLoader: loader)
             if let navigationController = homeViewController.navigationController {
                 navigationController.pushViewController(photoWallViewController, animated: false)
             }
@@ -26,4 +25,5 @@ final class HomeUIComposer {
         
         return homeViewController
     }
+    
 }

@@ -6,13 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 final class PhotoBlockCellViewModel {
     
+    typealias Observer<T> = (T) -> Void
     private let model: Photo
+    private let imageLoader: ImageLoader
+    var onImageLoad: Observer<UIImage>?
     
-    init(model: Photo) {
+    init(model: Photo, imageLoader: ImageLoader) {
         self.model = model
+        self.imageLoader = imageLoader
     }
     
     var title: String {
@@ -34,5 +39,19 @@ final class PhotoBlockCellViewModel {
     var thumbnailUrl: URL {
         return model.thumbnailUrl
     }
+    
+    func loadThumbnailImage() {
+        let url = model.thumbnailUrl 
+        self.imageLoader.load(url: url) { [weak self] result in
+            self?.handle(result)
+        }
+    }
+    
+    private func handle(_ result: ImageLoader.Result) {
+        if case let .success(image) = result {
+            onImageLoad?(image)
+        }
+    }
+    
 }
 
