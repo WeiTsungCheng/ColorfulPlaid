@@ -34,6 +34,8 @@ final class PhotoBlockCollectionViewCell: UICollectionViewCell {
     lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "title"
+        lbl.textAlignment = .center
+        lbl.numberOfLines = 2
         lbl.textColor = .black
         return lbl
     }()
