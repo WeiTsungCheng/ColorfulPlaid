@@ -38,11 +38,9 @@ final class PhotoBlockCellController {
         cell.titleLabel.text = viewModel.title
         
         viewModel.onImageLoad = { [weak self] image in
-            DispatchQueue.main.async {
-                self?.cell?.photoImageView.image = image
-            }
+            self?.cell?.photoImageView.image = image
         }
-
+        
         return cell
     }
     

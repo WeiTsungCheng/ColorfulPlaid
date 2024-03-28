@@ -12,12 +12,12 @@ final class PhotoBlockCellViewModel {
     
     typealias Observer<T> = (T) -> Void
     private let model: Photo
-    private let imageLoader: ImageLoader
+    private let imageLoader: ImageDataLoader
     private var imageLoadTask: URLSessionTask?
 
     var onImageLoad: Observer<UIImage>?
     
-    init(model: Photo, imageLoader: ImageLoader) {
+    init(model: Photo, imageLoader: ImageDataLoader) {
         self.model = model
         self.imageLoader = imageLoader
     }

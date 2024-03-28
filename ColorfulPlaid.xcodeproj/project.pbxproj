@@ -27,6 +27,7 @@
 		F4D2465A2BB448F1001C629E /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D246592BB448F1001C629E /* photos.json */; };
 		F4D2465E2BB44C3E001C629E /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2465D2BB44C3E001C629E /* PhotoAPI.swift */; };
 		F4D246612BB45A62001C629E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246602BB45A62001C629E /* ImageLoader.swift */; };
+		F4D246632BB59890001C629E /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246622BB59890001C629E /* MainQueueDispatchDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		F4D246592BB448F1001C629E /* photos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
 		F4D2465D2BB44C3E001C629E /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
 		F4D246602BB45A62001C629E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		F4D246622BB59890001C629E /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D246412BB3CE87001C629E /* PhotoWallComposer.swift */,
+				F4D246622BB59890001C629E /* MainQueueDispatchDecorator.swift */,
 			);
 			path = Composer;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				F4D246472BB3CF70001C629E /* PhotoWallViewModel.swift in Sources */,
 				F4D246522BB404FB001C629E /* PhotoBlockCellController.swift in Sources */,
 				F4D246542BB40536001C629E /* PhotoBlockCellViewModel.swift in Sources */,
+				F4D246632BB59890001C629E /* MainQueueDispatchDecorator.swift in Sources */,
 				F4D246172BB2E95F001C629E /* AppDelegate.swift in Sources */,
 				F4D246612BB45A62001C629E /* ImageLoader.swift in Sources */,
 				F4D246422BB3CE87001C629E /* PhotoWallComposer.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 final class HomeUIComposer {
     
-    static func homeComposedWith(api: PhotoAPI, loader: ImageLoader) -> HomeViewController {
+    static func homeComposedWith(api: DataLoader, loader: ImageDataLoader) -> HomeViewController {
         
         let homeViewModel = HomeViewModel()
         let homeViewController = HomeViewController()

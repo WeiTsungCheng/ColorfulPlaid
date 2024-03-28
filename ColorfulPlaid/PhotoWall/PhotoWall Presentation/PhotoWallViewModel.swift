@@ -14,34 +14,31 @@ final class PhotoWallViewModel {
     typealias Observer<T> = (T) -> Void
     var onPhotoLoad: Observer<[Photo]>?
 
-    let photoAPI: PhotoAPI
-    init(photoAPI: PhotoAPI) {
+    let photoAPI: DataLoader
+    init(photoAPI: DataLoader) {
         self.photoAPI = photoAPI
     }
 
     func loadPhotos() {
-        photoAPI.load() { result in
-            
-            DispatchQueue.main.async { [weak self] in
-                switch result {
-                case .success(let response):
-                
-                    if case .normal(let content) = response.type {
-                        
-                        if let content = content as? [Photo] {
-                            self?.onPhotoLoad?(content)
-                            
-                        } else {
-                            // 處理錯誤邏輯
-                        }
-                    }
+        photoAPI.load() { [weak self] result in
+            switch result {
+            case .success(let response):
+                if case .normal(let content) = response.type {
                     
-                case .failure(let response):
-                    // 處理錯誤邏輯
-                    print(response)
-                    return
+                    if let content = content as? [Photo] {
+                        self?.onPhotoLoad?(content)
+                        
+                    } else {
+                        // 處理錯誤邏輯
+                    }
                 }
+                
+            case .failure(let response):
+                // 處理錯誤邏輯
+                print(response)
+                return
             }
+
         }
     }
 }
