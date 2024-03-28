@@ -13,6 +13,8 @@ final class PhotoBlockCellViewModel {
     typealias Observer<T> = (T) -> Void
     private let model: Photo
     private let imageLoader: ImageLoader
+    private var imageLoadTask: URLSessionTask?
+
     var onImageLoad: Observer<UIImage>?
     
     init(model: Photo, imageLoader: ImageLoader) {
@@ -42,15 +44,21 @@ final class PhotoBlockCellViewModel {
     
     func loadThumbnailImage() {
         let url = model.thumbnailUrl 
-        self.imageLoader.load(url: url) { [weak self] result in
+        imageLoadTask = self.imageLoader.load(url: url) { [weak self] result in
             self?.handle(result)
         }
+        
     }
     
     private func handle(_ result: ImageLoader.Result) {
         if case let .success(image) = result {
             onImageLoad?(image)
         }
+    }
+    
+    func cancelImageDataLoad() {
+        imageLoadTask?.cancel()
+        imageLoadTask = nil
     }
     
 }

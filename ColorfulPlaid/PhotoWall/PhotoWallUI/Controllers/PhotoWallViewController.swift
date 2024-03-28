@@ -77,6 +77,11 @@ extension PhotoWallViewController: UICollectionViewDataSource {
         return cellController(forItemAt: indexPath).view(in: collectionView, at: indexPath)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let cell = cellController(forItemAt: indexPath)
+        cell.cancelLoad()
+    }
+    
 }
 
 extension PhotoWallViewController: UICollectionViewDataSourcePrefetching {

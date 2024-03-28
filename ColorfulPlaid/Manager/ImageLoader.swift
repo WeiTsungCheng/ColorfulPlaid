@@ -23,15 +23,15 @@ final class ImageLoader {
     
     typealias Result = Swift.Result<UIImage, Error>
     
-    func load(url: URL, completion:  @escaping (Result) -> Void) {
+    func load(url: URL, completion: @escaping (Result) -> Void) -> URLSessionTask? {
         
         if let image = imageCache.object(forKey: url as NSURL) {
             completion(.success(image))
-            return
+            return nil
         }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            
+       
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+
             if let data = data, let image = UIImage(data: data) {
                 self.imageCache.setObject(image, forKey: url as NSURL)
                 completion(.success(image))
@@ -42,9 +42,11 @@ final class ImageLoader {
                 }
                 completion(.failure(HTTPError(code: .noData)))
             }
-            
-        }.resume()
+        }
         
+        task.resume()
+        
+        return task
     }
     
 }
