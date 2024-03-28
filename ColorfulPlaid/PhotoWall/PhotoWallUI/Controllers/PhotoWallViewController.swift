@@ -18,6 +18,22 @@ final class PhotoWallViewController: UIViewController {
         return clv
     }()
     
+    private lazy var loadingActivityIndicatorContainerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        view.layer.cornerRadius = 5
+        view.clipsToBounds = true
+        // view.isHidden = true
+        return view
+    }()
+    
+    private lazy var loadingActivityIndicatorView: UIActivityIndicatorView = {
+        let idv = UIActivityIndicatorView(style: .large)
+        idv.color = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        //  idv.startAnimating()
+        return idv
+    }()
+    
     var collectionModel = [PhotoBlockCellController]() {
         didSet { collectionView.reloadData() }
     }
@@ -44,10 +60,36 @@ final class PhotoWallViewController: UIViewController {
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+        
+        view.addSubview(loadingActivityIndicatorContainerView)
+        loadingActivityIndicatorContainerView.addSubview(loadingActivityIndicatorView)
+        
+        loadingActivityIndicatorContainerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            loadingActivityIndicatorContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingActivityIndicatorContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loadingActivityIndicatorContainerView.widthAnchor.constraint(equalToConstant: 65),
+            loadingActivityIndicatorContainerView.heightAnchor.constraint(equalToConstant: 65)
+        ])
+        
+        loadingActivityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            loadingActivityIndicatorView.centerXAnchor.constraint(equalTo: loadingActivityIndicatorContainerView.centerXAnchor),
+            loadingActivityIndicatorView.centerYAnchor.constraint(equalTo: loadingActivityIndicatorContainerView.centerYAnchor),
+            loadingActivityIndicatorView.widthAnchor.constraint(equalToConstant: 60),
+            loadingActivityIndicatorView.heightAnchor.constraint(equalToConstant: 60)
+        ])
     }
     
     private func bind() {
         title = viewModel?.title
+        viewModel?.onLoading = { [weak self] isLoading in
+            if isLoading {
+                self?.startLoadingAnimation()
+            } else {
+                self?.stopLoadingAnimation()
+            }
+        }
     }
     
     func generateLayout() -> UICollectionViewCompositionalLayout {
@@ -57,7 +99,16 @@ final class PhotoWallViewController: UIViewController {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         return UICollectionViewCompositionalLayout(section: section)
-        
+    }
+    
+    private func startLoadingAnimation() {
+        loadingActivityIndicatorContainerView.isHidden = false
+        loadingActivityIndicatorView.startAnimating()
+    }
+    
+    private func stopLoadingAnimation() {
+        loadingActivityIndicatorContainerView.isHidden = true
+        loadingActivityIndicatorView.stopAnimating()
     }
     
 }
