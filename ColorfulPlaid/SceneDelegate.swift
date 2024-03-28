@@ -11,8 +11,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
-    let api = PhotoAPI()
-    let loader = ImageLoader()
+    private let url: URL = URL(string: "https://jsonplaceholder.typicode.com/photos")!
+    
+    private var api: PhotoAPI {
+        return PhotoAPI(url: url)
+    }
+    
+    private let loader = ImageLoader()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -24,7 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
     }
-
 
 }
 

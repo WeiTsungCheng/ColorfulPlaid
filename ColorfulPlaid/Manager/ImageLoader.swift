@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 
-final class ImageLoader {
+protocol ImageDataLoader {
+    typealias Result = Swift.Result<UIImage, Error>
+    func load(url: URL, completion: @escaping (Result) -> Void) -> URLSessionTask?
+}
+
+final class ImageLoader: ImageDataLoader {
     
     struct HTTPError: Error {
         let code: Code

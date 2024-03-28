@@ -30,7 +30,6 @@ final class PhotoWallViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.loadPhotos()
         setupUI()
     }
     

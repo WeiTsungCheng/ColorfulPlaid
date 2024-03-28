@@ -20,7 +20,7 @@ final class PhotoWallViewModel {
     }
 
     func loadPhotos() {
-        photoAPI.loadNews { result in
+        photoAPI.load() { result in
             
             DispatchQueue.main.async { [weak self] in
                 switch result {

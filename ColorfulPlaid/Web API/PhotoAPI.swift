@@ -8,21 +8,24 @@
 import Foundation
 import DolphinHTTP
 
-final class PhotoAPI {
+protocol DataLoader {
+    func load(completion: @escaping((Result<SuccessResponse, FailureResponse>) -> Void))
+}
+
+final class PhotoAPI: DataLoader {
     
     private let loader: HTTPLoader
+    private let url: URL
     
-    init(loader: HTTPLoader = URLSessionLoader(session: URLSession.shared)) {
+    init(url: URL, loader: HTTPLoader = URLSessionLoader(session: URLSession.shared)) {
+        self.url = url
         self.loader = loader
     }
     
-    func loadNews(completion: @escaping((Result<SuccessResponse, FailureResponse>) -> Void)) {
-        
-        let url = URL(string: "https://jsonplaceholder.typicode.com")!
+    func load(completion: @escaping((Result<SuccessResponse, FailureResponse>) -> Void)) {
         var r = HTTPRequest(scheme: url.scheme ?? "https")
         r.host = url.host
-        r.port = url.port
-        r.path = "/photos"
+        r.path =  url.path
         r.method = .get
         
         loader.load(request: r) { result in
@@ -66,7 +69,6 @@ final class PhotoAPI {
     }
     
 }
-
 
 
 struct SuccessResponse {

@@ -14,6 +14,8 @@ final class PhotoWallComposer {
         let photoWallViewController = PhotoWallViewController()
         photoWallViewController.viewModel = photoWallViewModel
         
+        photoWallViewModel.loadPhotos()
+        
         photoWallViewModel.onPhotoLoad = adaptFeedToCellControllers(forwardingTo: photoWallViewController, imageLoader: imageLoader)
         
         return photoWallViewController
