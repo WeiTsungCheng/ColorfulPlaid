@@ -13,12 +13,12 @@ final class PhotoWallViewModel {
     
     typealias Observer<T> = (T) -> Void
     var onPhotoLoad: Observer<[Photo]>?
-
-    let photoAPI: DataLoader
+    
+    private let photoAPI: DataLoader
     init(photoAPI: DataLoader) {
         self.photoAPI = photoAPI
     }
-
+    
     func loadPhotos() {
         photoAPI.load() { [weak self] result in
             switch result {
@@ -38,7 +38,7 @@ final class PhotoWallViewModel {
                 print(response)
                 return
             }
-
+            
         }
     }
 }

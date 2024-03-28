@@ -49,17 +49,6 @@ final class PhotoBlockCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//        clear()
-//    }
-//    
-//    private func clear() {
-//        self.idLabel.text = nil
-//        self.photoImageView.image = nil
-//        self.titleLabel.text = nil
-//    }
-    
     private func setupUI() {
         contentView.backgroundColor = .white
         contentView.addSubview(photoImageView)

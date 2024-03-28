@@ -34,9 +34,9 @@ final class ImageLoader: ImageDataLoader {
             completion(.success(image))
             return nil
         }
-       
+        
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-
+            
             if let data = data, let image = UIImage(data: data) {
                 self.imageCache.setObject(image, forKey: url as NSURL)
                 completion(.success(image))

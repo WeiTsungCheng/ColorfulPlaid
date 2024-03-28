@@ -9,16 +9,16 @@ import Foundation
 
 final class MainQueueDispatchDecorator<T> {
     private let component: T
-
+    
     init(component: T) {
         self.component = component
     }
-
+    
     func dispatch(completion: @escaping () -> Void) {
         guard Thread.isMainThread else {
             return DispatchQueue.main.async(execute: completion)
         }
-
+        
         completion()
     }
 }

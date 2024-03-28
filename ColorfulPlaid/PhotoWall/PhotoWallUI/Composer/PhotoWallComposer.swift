@@ -13,7 +13,7 @@ final class PhotoWallComposer {
         let photoWallViewModel = PhotoWallViewModel(photoAPI:  MainQueueDispatchDecorator(component: api))
         let photoWallViewController = PhotoWallViewController()
         photoWallViewController.viewModel = photoWallViewModel
-
+        
         photoWallViewModel.loadPhotos()
         
         photoWallViewModel.onPhotoLoad = adaptFeedToCellControllers(forwardingTo: photoWallViewController, imageLoader: MainQueueDispatchDecorator(component: imageLoader))
