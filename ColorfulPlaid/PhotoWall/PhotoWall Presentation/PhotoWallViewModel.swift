@@ -33,7 +33,7 @@ final class PhotoWallViewModel {
                     }
                 }
                 
-            case .failure(let response):
+            case .failure:
                 // 處理錯誤邏輯
                 return
             }
