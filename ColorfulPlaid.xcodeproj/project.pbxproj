@@ -28,6 +28,8 @@
 		F4D2465E2BB44C3E001C629E /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2465D2BB44C3E001C629E /* PhotoAPI.swift */; };
 		F4D246612BB45A62001C629E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246602BB45A62001C629E /* ImageLoader.swift */; };
 		F4D246632BB59890001C629E /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246622BB59890001C629E /* MainQueueDispatchDecorator.swift */; };
+		F4D246652BB65D05001C629E /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246642BB65D05001C629E /* DataLoader.swift */; };
+		F4D246672BB65D7E001C629E /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D246662BB65D7E001C629E /* ImageDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		F4D2465D2BB44C3E001C629E /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
 		F4D246602BB45A62001C629E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		F4D246622BB59890001C629E /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
+		F4D246642BB65D05001C629E /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		F4D246662BB65D7E001C629E /* ImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 		F4D2465B2BB44C13001C629E /* Web API */ = {
 			isa = PBXGroup;
 			children = (
+				F4D246642BB65D05001C629E /* DataLoader.swift */,
 				F4D2465D2BB44C3E001C629E /* PhotoAPI.swift */,
 			);
 			path = "Web API";
@@ -226,6 +231,7 @@
 		F4D2465F2BB45A3E001C629E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				F4D246662BB65D7E001C629E /* ImageDataLoader.swift */,
 				F4D246602BB45A62001C629E /* ImageLoader.swift */,
 			);
 			path = Manager;
@@ -312,10 +318,12 @@
 				F4D2461B2BB2E95F001C629E /* HomeViewController.swift in Sources */,
 				F4D246472BB3CF70001C629E /* PhotoWallViewModel.swift in Sources */,
 				F4D246522BB404FB001C629E /* PhotoBlockCellController.swift in Sources */,
+				F4D246672BB65D7E001C629E /* ImageDataLoader.swift in Sources */,
 				F4D246542BB40536001C629E /* PhotoBlockCellViewModel.swift in Sources */,
 				F4D246632BB59890001C629E /* MainQueueDispatchDecorator.swift in Sources */,
 				F4D246172BB2E95F001C629E /* AppDelegate.swift in Sources */,
 				F4D246612BB45A62001C629E /* ImageLoader.swift in Sources */,
+				F4D246652BB65D05001C629E /* DataLoader.swift in Sources */,
 				F4D246422BB3CE87001C629E /* PhotoWallComposer.swift in Sources */,
 				F4D2463B2BB33947001C629E /* HomeUIComposer.swift in Sources */,
 				F4D2465E2BB44C3E001C629E /* PhotoAPI.swift in Sources */,
