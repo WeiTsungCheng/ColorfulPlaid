@@ -23,14 +23,12 @@ final class PhotoWallViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         view.layer.cornerRadius = 5
         view.clipsToBounds = true
-        // view.isHidden = true
         return view
     }()
     
     private lazy var loadingActivityIndicatorView: UIActivityIndicatorView = {
         let idv = UIActivityIndicatorView(style: .large)
         idv.color = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        //  idv.startAnimating()
         return idv
     }()
     

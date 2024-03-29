@@ -28,7 +28,6 @@ final class PhotoWallViewModel {
                     
                     if let content = content as? [Photo] {
                         self?.onPhotoLoad?(content)
-                        
                     } else {
                         // 處理錯誤邏輯
                     }
@@ -36,7 +35,6 @@ final class PhotoWallViewModel {
                 
             case .failure(let response):
                 // 處理錯誤邏輯
-                print(response)
                 return
             }
             completion()
